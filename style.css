@@ -1,0 +1,1157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Header */
+
+.header {
+   position: sticky;
+   top: 0;
+   left: 0;
+   background-color: #fff;
+   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+   z-index: 99;
+}
+
+.header .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    height: 95px;
+    margin: auto;
+}
+
+.leftNav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.leftNav .logo {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.leftNav .logo img {
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+}
+
+.leftNav .logo .separator {
+    width: 1px;
+    height: 25px;
+    background-color: #dedcdc;
+    margin: 0 60px;
+}
+
+.leftNav .leftnavItems {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+}
+
+.leftnavItems li {
+    list-style: none;
+    padding: 10px 15px;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+}
+
+.leftnavItems li img {
+    width: 30px;
+    height: 30px;
+    filter: grayscale(1) brightness(0);
+}
+
+.leftnavItems li:hover {
+    background-color: #f7f7f7;
+    border-radius: 10px;
+}
+
+.leftnavItems li:hover img{
+    filter: grayscale(0) brightness(1);
+}
+
+.leftnavItems li p, .rightnavItems p {
+    font-size: 14px;
+    color: #1d1d1d;
+    font-weight: 500;
+}
+
+.rightNav {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.rightNav .rightnavItems {
+    display: flex;
+    gap: 10px;
+    padding: 10px 15px;
+    transition: all .3s ease-in-out;
+    cursor: pointer; 
+}
+
+.rightNav .rightnavItems:hover {
+    background-color: #f7f7f7;
+    border-radius: 10px;
+}
+
+.rightNav .rightnavItems i {
+    font-size: 20px;
+    color: #1d1d1d;
+}
+
+.rightNav .rightnavItems .accountContainer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.rightNav .rightnavItems .accountContainer .account {
+   display: flex;
+   align-items: center;
+   gap: 2px;
+}
+
+.rightNav .rightnavItems .accountContainer .account .dropdown {
+    font-size: 14px;
+}
+
+
+
+/* Hero Section */
+
+#main {
+    width: 100%;
+    margin: auto;
+}
+
+#heroSection {
+    background: url(/Assest/HeroImage.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 80vh;
+}
+
+#heroSection .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    padding: 80px 0 0 0;
+}
+
+.container h1 {
+    font-size: 32px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.container .searchContainer {
+    width: 70%;
+    height: 110px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    border-radius: 30px;
+}
+
+.searchContainer .from, .searchContainer .to {
+    width: 28%;
+    height: 100%;
+    border-right: 1px solid #e0e0e0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-left: 40px;
+    position: relative;
+    cursor: pointer;
+}
+
+.searchContainer .from i, .searchContainer .to i {
+    font-size: 22px;
+    color: #6b6b6b;
+}
+
+.searchContainer .from p, .searchContainer .to p {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+    color: #1d1d1d;
+}
+
+.searchContainer .from .iconBox {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 30%;
+    right: -7%;
+}
+
+.searchContainer .from .iconBox:hover {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.searchContainer .from .iconBox i {
+    font-size: 16px;
+    color: #929191;
+}
+
+.searchContainer .date {
+    width: 22%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding-left: 40px;
+    height: 100%;
+    cursor: pointer;
+}
+
+.searchContainer .date p {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+    color: #1d1d1d;
+}
+
+.searchContainer .date i {
+    font-size: 25px;
+    color: #6b6b6b;
+}
+
+.searchContainer .searchBtn {
+   background-color: #D84E55;
+   border: none;
+   width: 22%;
+   height: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: #fff;
+   border-top-right-radius: 30px;
+   border-bottom-right-radius: 30px;
+   cursor: pointer;
+}
+
+.searchContainer .searchBtn button {
+    width: 100%;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+
+/* trending offers section */
+
+#trendingOfferSection {
+    max-width: 1200px;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 30px;
+    padding: 2.3rem;
+    margin-top: -150px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+}
+
+#trendingOfferSection .container .topRow {
+    display: flex;
+    justify-content: space-between;
+}
+
+#trendingOfferSection .container .topRow h1 {
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 39px;
+    color: #4a4a4a;
+    text-transform: uppercase;
+}
+
+#trendingOfferSection .container .topRow button {
+   font-size: 18px;
+   font-weight: 600;
+   color: #1034d9;
+   background-color: #fff;
+   border: 1px solid #aaaaaa;
+   outline: 0;
+   height: 45px;
+   width: 130px;
+   border-radius: 40px;
+   cursor: pointer;
+   transition: .3s ease-in-out;
+}
+
+#trendingOfferSection .container .topRow button:hover {
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+}
+
+#trendingOfferSection .cardRow {
+    display: flex;
+    gap: 25px;
+    padding-top: 20px;
+}
+
+#trendingOfferSection .cardRow .card {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding: 15px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+#trendingOfferSection .cardRow .card img {
+    border-radius: 50%;
+}
+
+#trendingOfferSection .cardRow .cardOne {
+    background: linear-gradient(71.04deg, rgb(12, 57, 139) -6.92%, rgb(62, 118, 216) 109.43%);
+}
+
+#trendingOfferSection .cardRow .cardTwo {
+    background-image: linear-gradient(71.04deg, rgb(39, 57, 101) -6.92%, rgb(80, 210, 149) 109.43%);
+}
+
+#trendingOfferSection .cardRow .cardThree {
+    background-image: linear-gradient(71.04deg, rgb(72, 0, 4) -6.92%, rgb(216, 78, 85) 109.43%);
+}
+
+.cardRow .card button {
+    background-color: #ffffff33;
+    border: 0;
+    outline: 0;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 40px;
+    text-align: center;
+    font-size: 12px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+}
+
+.cardRow .card h3 {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    color: #fff;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.cardRow .card p {
+    font-size: 12px;
+    color: #fff;
+    line-height: 16px;
+}
+
+.cardRow .card .cardButtons {
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+    gap: 10px;
+}
+
+.cardRow .card .cardButtons button {
+    background-color: #ffffff33;
+    border: 2px dotted #fff;
+    border-radius: 7px;
+    padding: 5px 8px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+
+/* About Section */
+
+#aboutSection {
+    max-width: 1200px;
+    margin: 100px auto;
+    padding-left: 2.3rem;
+    min-height: 100vh;
+    display: flex;
+    overflow: hidden;
+}
+
+#aboutSecton .aboutLeft {
+    background-color: red;
+    color: red;
+    width: 50%;
+}
+
+.aboutLeft h3 {
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 60px;
+    color: #1d1d1d;
+    width: 90%;
+}
+
+.aboutLeft h3 span{
+    font-weight: 700;
+}
+
+.aboutLeft .aboutTabs {
+    display: flex;
+    padding: 40px 0 0 0;
+    width: 80%;
+}
+
+.aboutLeft .aboutTabs .tab1 {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-left: 20px;
+    width: 55%;
+    cursor: pointer;
+}
+
+.aboutLeft .aboutTabs .tab1 img {
+    width: 50px;
+    height: 50px;
+}
+
+.aboutLeft .aboutTabs .tab1 h4 {
+    color: #d84e55;
+    line-height: 24px;
+}
+
+.aboutLeft .aboutTabs .tab1 .separator{
+    width: 1px;
+    height: 25px;
+    background-color: #dedcdc;
+}
+
+.aboutLeft .aboutTabs .tab2 {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    gap: 20px;
+    padding: 5px 15px;
+    width: 45%;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    cursor: pointer;
+}
+
+.aboutLeft .aboutTabs .tab2:hover {
+   background-color: #E5E5E5;
+}
+
+.aboutLeft .aboutTabs .tab2 img {
+    width: 50px;
+    height: 50px;
+    filter: grayscale(1) brightness(0);
+}
+
+.aboutLeft .aboutTabs .tab2:hover img {
+    filter: grayscale(0) brightness(1);
+ }
+
+.aboutLeft .aboutTabs .tab2 h4 {
+    color: #4a4a4a;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.aboutLeft .horizantalLine {
+    background-color: #e5e5e5;
+    height: 1px;
+    width: 80%;
+    position: relative;
+}
+
+.aboutLeft .horizantalLine .selectedTabs{
+    background-color: #d84e55;
+    height: 4px;
+    width: 45%;
+    position: absolute;
+    top: -2.5px;
+    border-radius: 3px 3px 0 0;
+}
+
+.aboutLeft .aboutInfo {
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.aboutLeft .aboutInfo .aboutInfoHeading h4 {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 34px;
+    color: #1d1d1d;
+}
+
+.aboutLeft .aboutInfo .aboutInfoPoints {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.aboutLeft .aboutInfo .btn {
+    padding: 15px 0;
+    width: 42%;
+    background-color: #D84E55;
+    border: 0;
+    outline: 0;
+    color: #fff;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.aboutLeft .aboutInfo .btn i {
+    font-size: 23px;
+}
+
+#aboutSection .aboutRight {
+    background: url("https://s3.rdbuz.com/web/images/homeV2/AboutUs/aboutUsImg.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+#aboutSection .aboutRight img {
+   margin-left: -8rem;
+}
+
+/* App Install Section */
+
+#appSection {
+    background: url("https://s1.rdbuz.com/web/images/homeV2/appinstall/appInstallbg.svg");
+    width: 1200px;
+    background-repeat: no-repeat;
+    margin: auto;
+    margin-bottom: 50px;
+    border-radius: 50px;
+    padding: 2rem 3rem;
+}
+
+#appSection .appSectionHeading {
+    color: #fff;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 48px;
+    text-transform: uppercase;
+}
+
+#appSection .appInstallContainer {
+    display: flex;
+    gap: 3rem;
+    width: 70%;
+    padding-top: 2rem;
+}
+
+.appInstallContainer .appInstallLeftContainer {
+    background-color: white;
+    padding: 3rem 2rem;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 50%;
+}
+
+.appInstallContainer .appInstallLeftContainer h4{
+    font-size: 18px;
+    color: #4a4a4a;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+.appInstallContainer .appInstallLeftContainer h4 i{
+    color: #36B077;
+    font-size: 22px;
+    margin-right: 10px;
+}
+
+.appInstallLeftContainer .appInfo {
+    display: flex;
+    gap: 30px;
+    margin-top: 1rem;
+}
+
+.appInstallLeftContainer .appInfo .playStore, .appInstallLeftContainer .appInfo .appStore{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.appInstallLeftContainer .appInfo .rating {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    color: #4a4a4a;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.appInstallLeftContainer .appInfo .rating i {
+    font-size: 14px;
+    text-align: center;
+}
+
+.appInstallLeftContainer .appInfo .playStore h5,.appInstallLeftContainer .appInfo .appStore h5{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    color: #4a4a4a;
+}
+
+.appInstallLeftContainer .appInfo .playStore h4, .appInstallLeftContainer .appInfo .appStore h4{
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 17px;
+    color: #1d1d1d;
+}
+
+.appInstallLeftContainer .appInfo .separator {
+    width: 2px;
+    background-color: #c1c1c1;
+}
+
+.appInstallContainer .appInstallRightContainer {
+    display: flex;
+    justify-content: space-around;
+    padding: 3rem 0;
+    width: 50%;
+}
+
+.appInstallRightContainer .qrScan {
+    width: 40%;
+}
+
+.appInstallRightContainer .qrScan h3 {
+    font-size: 16px;
+    color: #fff;
+    font-weight: 700;
+    line-height: 20px;
+    padding-bottom: 8px;
+}
+
+.appInstallRightContainer .downloadLink {
+    color: white;
+    width: 40%;
+}
+
+.appInstallRightContainer .downloadLink h3 {
+    font-size: 16px;
+    color: #fff;
+    font-weight: 700;
+    line-height: 20px;
+    padding-bottom: 8px;
+}
+
+.appInstallRightContainer .downloadLink img {
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+
+/* Primo Section */
+
+#primoSection {
+    max-width: 1200px;
+    margin: 100px auto;
+    background-color: #fff;
+    padding: 2.3rem;
+}
+
+#primoSection .primoTop {
+    text-align: center;
+}
+
+#primoSection .primoInnerSection {
+    display: flex;
+    gap: 25px;
+    padding-top: 50px;
+}
+
+#primoSection .primoInnerSection .card {
+    display: flex;
+    gap: 20px;
+    background-image: linear-gradient(to right, rgb(38, 72, 153), rgb(125, 70, 134));
+    align-items: center;
+    padding: 15px 25px;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 33%;
+}
+
+.primoInnerSection .card .primoCardHeading {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 27px;
+    color: #fff;
+}
+
+.primoInnerSection .card .primoCardText {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #fff;
+    margin-top: .8rem;
+}
+
+/* Patners Section */
+
+#partnerSection {
+    max-width: 1200px;
+    margin: auto;
+    background-color: #fff;
+    padding: 2.3rem;
+}
+
+#partnerSection .partnerHeading h2{
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 48px;
+    color: #4a4a4a;
+}
+
+#partnerSection .partnerSubheading {
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem 0;
+}
+
+#partnerSection .partnerSubheading h4 {
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 34px;
+    color: #4a4a4a;
+}
+
+#partnerSection .partnerSubheading button {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    font-family: 'Montserrat', sans-serif;
+    color: #1d1d1d;
+    background-color: #fff;
+    border: 1px solid #aaaaaa;
+    outline: 0;
+    height: 45px;
+    width: 110px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+#partnerSection .partnerSubheading button:hover {
+    box-shadow: rgb(170, 170, 170) 0px 4px 12px 0px;
+}
+
+#partnerSection .partnerInnerSection {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#partnerSection .partnerInnerSection .rctcLogoContainer {
+    text-align: center;
+    cursor: pointer;
+}
+
+#partnerSection .partnerInnerSection .rctcLogoContainer .rtcLogo {
+    width: 100px;
+    height: 100px;
+}
+
+#partnerSection .partnerInnerSection .rctcLogoContainer .rtcText {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #1d1d1d;
+    padding: 10px 20px;
+    border-radius: 50px;
+}
+
+#partnerSection .partnerInnerSection .rctcLogoContainer .rtcText:hover {
+    background-color: #F0F0F0;
+}
+
+#partnerSection .privatePartnerContainer {
+    padding: 3rem 0;
+}
+
+.privatePartnerContainer .privatePartnerSubheading {
+    display: flex;
+    justify-content: space-between;
+}
+
+.privatePartnerContainer .privatePartnerSubheading h4 {
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 34px;
+    color: #4a4a4a;
+}
+
+.privatePartnerContainer .privatePartnerSubheading button {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    font-family: 'Montserrat', sans-serif;
+    color: #1d1d1d;
+    background-color: #fff;
+    border: 1px solid #aaaaaa;
+    outline: 0;
+    height: 45px;
+    width: 110px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+.privatePartnerContainer .privatePartnerSubheading button:hover {
+    box-shadow: rgb(170, 170, 170) 0px 4px 12px 0px;
+}
+
+.privatePartnerContainer .privatePartnerInnerSection {
+    padding: 2rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem 2rem;
+    width: 100%;
+}
+
+.privatePartnerContainer .privatePartnerInnerSection .operatorName{
+    width: 17%;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+}
+
+.privatePartnerContainer .privatePartnerInnerSection .operatorName h4{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #1d1d1d;
+    padding: 1rem .7rem;
+    border-radius: 50px;
+    width: fit-content;
+}
+
+.privatePartnerContainer .privatePartnerInnerSection .operatorName:hover h4{
+    background-color: #f0f0f0;
+}
+
+/* FAQ Section */
+ 
+#faqSection {
+    max-width: 1200px;
+    margin: auto;
+    background-color: #fff;
+    padding: 2.3rem;
+}
+
+#faqSection .faqHeading h3{
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 28px;
+    color: #1d1d1d;
+}
+
+#faqSection .faqTabsContainer {
+    display: flex;
+    gap: 20px;
+    padding: 2.3rem 0;
+}
+
+#faqSection .faqTabsContainer .faqtab{
+    padding: 0 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+#faqSection .faqTabsContainer .faqtab::after {
+    content: "";
+    width: 0;
+    height: 3px;
+    background-color: #c1c1c1;
+    position: absolute;
+    left: 0;
+    top: 2rem;
+    /* transition: .1s ease-in-out; */
+}
+
+#faqSection .faqTabsContainer .activeTab::after {
+    content: "";
+    width: 100%;
+    height: 3px;
+    background-color: #d84e55;
+    position: absolute;
+    left: 0;
+    top: 2rem;
+    /* transition: .1s ease-in-out; */
+}
+
+#faqSection .faqTabsContainer .faqtab:hover::after {
+    width: 100%;
+}
+
+#faqSection .faqTabsContainer .faqtab h4{
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #1d1d1d;
+}
+
+#faqSection .faqTabsContainer .activeTab h4 {
+    color: #d84e55;
+}
+
+/* QNA */
+
+#faqSection .faqQnaContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem 0;
+    padding: 1rem 0;
+}
+
+#faqSection .faqQnaContainer .faqQustionContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #f3f4f9;
+    border-radius: 15px;
+    padding: 2rem 1.7rem;
+    cursor: pointer;
+}
+
+#faqSection .faqQnaContainer .faqQustionContainer h2{
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    color: #1d1d1d;
+}
+
+#faqSection .faqQnaContainer .faqQustionContainer i{
+    font-size: 22px;
+}
+
+/* Global presence section */
+
+#globalPresenceSection {
+    max-width: 1200px;
+    margin: auto;
+    background-color: #fff;
+    padding: 2.3rem;
+    margin-bottom: 3rem;
+}
+
+#globalPresenceSection .globalPresenceHeading h2{
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 48px;
+    color: #1d1d1d;
+}
+
+#globalPresenceSection .globalPresenceInnerSection {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 3rem 0;
+}
+
+#globalPresenceSection .globalPresenceInnerSection .globalLogoContainer {
+    text-align: center;
+    cursor: pointer;
+}
+
+#globalPresenceSection .globalPresenceInnerSection .globalLogoContainer .globalLogo {
+    width: 150px;
+    height: 130px;
+}
+
+#globalPresenceSection .globalPresenceInnerSection .globalLogoContainer .globalText {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 24px;
+    color: #1d1d1d;
+    margin-top: 10px;
+    padding: 10px 20px;
+    border-radius: 50px;
+}
+
+#globalPresenceSection .globalPresenceInnerSection .globalLogoContainer .globalText:hover {
+    background-color: #F0F0F0;
+}
+
+#globalPresenceSection .scrollToTopSection {
+    position: relative;
+}
+
+#globalPresenceSection .scrollToTop {
+    position: absolute;
+    right: 0;
+    padding: 10px 12px 22px 12px;
+    border-radius: 15px;
+    border: 1px solid #3e3e52;
+    cursor: pointer;
+}
+
+#globalPresenceSection .scrollToTop a {
+    text-decoration: none;
+    color: #1d1d1d;
+}
+
+#globalPresenceSection .scrollToTop i {
+    font-size: 20px;
+    animation: move 2s ease-in-out infinite 5s;
+}
+
+@keyframes move {
+    0% {
+        transform: translatey(0);
+    }
+
+    50% {
+        transform: translatey(12px);
+    }
+
+    100% {
+        transform: translatey(0);
+    }
+}
+
+/* Footer Section */
+
+#footer {
+    background-color: #F7F7F7;
+}
+
+#footer .footerTop, #footer .mainFooter {
+    max-width: 1200px;
+    margin: auto;
+    padding: 2.3rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+#footer .horizontalSeperator {
+    max-width: 1200px;
+    margin: auto;
+    height: 1px;
+    background-color: #e5e5e5;
+}
+
+.footerTop .footerLinkContainer, .mainFooter .footerLinkContainer {
+    list-style: none;
+}
+
+.footerTop .footerLinkContainer li, .mainFooter .footerLinkContainer li{
+    margin-bottom: 10px;
+}
+
+.footerTop .footerLinkContainer .footerLinkTitle, .mainFooter .footerLinkContainer .footerLinkTitle{
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 20px;
+    color: #1d1d1d;
+}
+
+.footerTop .footerLinkContainer .footerLinkItem, .mainFooter .footerLinkContainer .footerLinkItem{
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 100;
+    line-height: 20px;
+    color: #3e3e52;
+}
+
+.mainFooter .footerInfo {
+    width: 23%;
+}
+
+.mainFooter .footerInfo .footerLogo {
+    width: 80px;
+    height: 80px;
+}
+
+.mainFooter .footerInfo .footerText {
+    font-size: 14px;
+    font-weight: 100;
+    line-height: 20px;
+    color: #3e3e52;
+    margin-top: -5px;
+    width: 100%;
+}
+
+#footer .copyrightSection {
+    max-width: 1200px;
+    margin: auto;
+    padding: 2.3rem;
+    display: flex;
+    justify-content: space-between;
+    background-color: #F7F7F7;
+}
+
+.copyrightSection .copyright {
+    font-size: 14px;
+    font-weight: 100;
+    line-height: 20px;
+    color: #3e3e52;
+}
+
+.copyrightSection .footerSocial {
+   display: flex;
+   gap: 0 22px;
+}
+
+.copyrightSection .footerSocial img {
+   cursor: pointer;
+}
+
+
+
+/* Media Query */
+
+@media screen and (min-width:1400px) {
+    #heroSection {
+        background-position: center;
+    }
+
+    .container .searchContainer {
+        width: 1000px;
+    }
+}
